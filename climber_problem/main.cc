@@ -6,6 +6,20 @@
     ((sizeof(a) / sizeof(*(a))) / \
     static_cast<size_t>(!(sizeof(a) % sizeof(*(a)))))
 
+int atoi(char *str)
+{
+    int res = 0;
+    while(*str != '\0')
+    {
+    	if('0' < *str && *str < '9')
+	{
+	    res = res*10+(*str-'0');
+	}
+	str++;
+    }
+    return res;
+}
+
 int resolve(const char* input)
 {
     int total = 0;
