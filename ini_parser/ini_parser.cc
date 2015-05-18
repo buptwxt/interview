@@ -91,7 +91,7 @@ namespace qh
 	{
 	    if(NULL != found)
 	        *found = false;
-            std::string res("");
+            static std::string res("");
 	    return res;
 	}
 	else
