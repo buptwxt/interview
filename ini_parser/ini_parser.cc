@@ -34,8 +34,8 @@ namespace qh
 	if(std::string::npos != str.find(key_value_seperator))
 	{
 	    std::string key = str.substr(0, str.find(key_value_seperator));
-	    std::string value = str.substr(str.find(key_value_seperator)+key_value_seperator.size());
-            mapResult.insert(std::pair<std::string, std::string>(section+key, value));
+	    std::string value = str.substr(str.find(key_value_seperator)+key_value_seperator.size(), str.size()-str.find(key_value_seperator));
+            mapResult.insert(std::pair<std::string, std::string>(key, value));
 
 	}
 	return;
