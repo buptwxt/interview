@@ -1,7 +1,10 @@
 #ifndef QIHOO_INI_PARSER_H_
 #define QIHOO_INI_PARSER_H_
 
-#include <string>
+#include<string>
+#include<iostream>
+#include<fstream>
+#include<map>
 
 namespace qh
 {
@@ -37,6 +40,9 @@ namespace qh
         const std::string& Get(const std::string& section, const std::string& key, bool* found);
 
     private:
+        std::map<std::string, std::string> mapResult;
+        void ParseSection(std::string &str, std::string &section, const std::string & key_value_seperator);
+
     };
 }
 
